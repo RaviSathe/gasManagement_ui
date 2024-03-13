@@ -1,0 +1,13 @@
+<div class="outer-box">
+    <div class="box"  *ngFor="let gas of gasStation; index as i">
+        <div class="img">
+            <img src="{{gas.gasImage}}" alt="gas_image">
+        </div>
+        <div class="desc">
+            <div class="name">Name: {{gas.name}}</div>
+            <div class="availability">Availability: {{gas.availability}}</div>
+            <div class="price">Price:  {{gas.price}}</div>
+            <button class="buy_now_btn" (click)="buyNow(i)">Buy Now</button>
+        </div>
+    </div>
+</div>

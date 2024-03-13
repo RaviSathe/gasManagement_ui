@@ -1,0 +1,15 @@
+  <header>
+    <div class="container">
+        <h1 routerLink="">Maha Gas</h1>
+        <nav>
+            <ul>
+                <li *ngIf="login"><a routerLink="dashboard" routerLinkActive="active">Home</a></li>
+                <li><a routerLink="about" routerLinkActive="active">About</a></li>
+                <li><a routerLink="service" routerLinkActive="active">Services</a></li>
+                <li><a routerLink="contact" routerLinkActive="active">Contact</a></li>
+                <li *ngIf="!login"><a routerLink="login-registration" routerLinkActive="active">Login</a></li>
+                <li *ngIf="login"><a (click)="logOut()" routerLinkActive="active">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>

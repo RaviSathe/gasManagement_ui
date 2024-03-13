@@ -1,0 +1,52 @@
+<div class="body">
+
+    <div class="container" *ngIf="login">
+        <section class="login-form">
+        <h2>Login</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" formControlName="email" placeholder="Enter Email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" formControlName="password" placeholder="Enter Password" required>
+            </div>
+            <button [disabled]="areInputEmpty()" type="submit">Login</button> &nbsp;
+            <a (click)="aTag()">Don't have Account!, Register</a>
+        </form>
+    </section>
+</div>
+
+<!-- -------------Regstration---------------- -->
+
+<div class="container" *ngIf="!login">
+    <section class="login-form">
+        <h2>Register</h2>
+        <form [formGroup]="registrationForm" (ngSubmit)="onRegistration()">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter First Name" formControlName="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name" formControlName="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="mobileNo">Mobile Number:</label>
+                <input type="number" id="mobileNo" name="mobileNo" placeholder="Enter Mobile Number" formControlName="mobileNo" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="Enter Email" formControlName="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter Password" formControlName="password" required>
+            </div>
+            <button [disabled]="registrationForm.invalid" type="submit" (click)="onRegistration()">Register</button> &nbsp;
+            <a (click)="aTag()">Already have account, Login</a>
+        </form>
+    </section>
+</div>
+            </div>

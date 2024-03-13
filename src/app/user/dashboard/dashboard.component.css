@@ -1,0 +1,58 @@
+.outer-box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.box{
+    margin-top: 20px;
+    background: skyblue;
+    height: 300px;
+    display: flex;
+    width: 32%;
+    /* flex-direction: column; */
+}
+.box .img{
+    height: 250px;
+    margin-top: 20px;
+}
+.box .img img{
+    height: 100%;
+}
+
+.box .desc{
+    padding: 10px 25px;
+}
+
+.desc .name{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.desc .availability{
+    background: rgb(62, 230, 62);
+    padding: 10px;
+}
+
+.desc .price{
+    font-size: 25px;
+    margin: 25px 0;
+}
+
+.buy_now_btn{
+    padding: 10px 20px;
+    color: red;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.buy_now_btn:hover{
+    transform: scale(1.08); 
+}
+
+span{
+    display: inline-block;
+}
